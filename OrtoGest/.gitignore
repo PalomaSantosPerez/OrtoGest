@@ -1,0 +1,23 @@
+# Archivos y carpetas que Visual Studio genera automáticamente
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.cache
+*.log
+*.dbmdl
+*.pdb
+*.mdb
+*.ldf
+*.mdf
+*.vshost.*
+*.db
+*.opendb
+*.vsidx
+*.docstates
+
+# Archivos temporales
+*.tmp
+*.temp
+~$*

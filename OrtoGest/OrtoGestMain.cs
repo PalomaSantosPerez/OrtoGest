@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrtoGest
 {
-    public partial class FrmPrincipal : Form
+    public partial class OrtoGestMain : Form
     {
-        public FrmPrincipal()
+        public OrtoGestMain()
         {
             InitializeComponent();
         }

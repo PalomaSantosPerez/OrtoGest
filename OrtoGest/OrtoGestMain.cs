@@ -28,50 +28,54 @@ namespace OrtoGest
 
         }
 
+        //BOTON CLIENTES
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            btnClientes.BackColor = Color.SteelBlue;
+           // btnClientes.BackColor = Color.SteelBlue;
 
         }
 
         private void btnClientes_MouseEnter(object sender, EventArgs e)
         {
-            btnClientes.BackColor = Color.LightSteelBlue;
+            btnClientes.BackColor = Color.LightCyan;
 
         }
 
 
         private void btnClientes_MouseLeave(object sender, EventArgs e)
         {
-            btnClientes.BackColor = Color.SteelBlue;
+            btnClientes.BackColor = Color.Aquamarine;
 
         }
 
+        //BOTON PRODUCTOS
         private void btnProductos_MouseEnter(object sender, EventArgs e)
         {
-            btnProductos.BackColor = Color.LightSteelBlue;
+            btnProductos.BackColor = Color.LightCyan;
         }
 
         private void btnProductos_MouseLeave(object sender, EventArgs e)
         {
-            btnProductos.BackColor = Color.SteelBlue;
+            btnProductos.BackColor = Color.Aquamarine;
         }
-
+        
+        //BOTON VENTAS
         private void btnVentas_MouseEnter(object sender, EventArgs e)
         {
-            btnVentas.BackColor = Color.LightSteelBlue;
+            btnVentas.BackColor = Color.LightCyan;
 
         }
 
         private void btnVentas_MouseLeave(object sender, EventArgs e)
         {
-            btnVentas.BackColor = Color.SteelBlue;
+            btnVentas.BackColor = Color.Aquamarine;
 
         }
 
+        //BOTON SALIR
         private void btnSalir_MouseEnter(object sender, EventArgs e)
         {
-            btnSalir.BackColor = Color.LightSteelBlue;
+            btnSalir.BackColor = Color.LightBlue;
 
         }
 

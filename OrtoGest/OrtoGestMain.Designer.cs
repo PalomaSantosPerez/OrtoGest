@@ -47,7 +47,6 @@
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "OrtoGest";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblTitulo.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnClientes
             // 
@@ -79,6 +78,7 @@
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             this.btnProductos.MouseEnter += new System.EventHandler(this.btnProductos_MouseEnter);
             this.btnProductos.MouseLeave += new System.EventHandler(this.btnProductos_MouseLeave);
             // 
@@ -95,7 +95,7 @@
             this.btnVentas.TabIndex = 3;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
-            this.btnVentas.Click += new System.EventHandler(this.button3_Click);
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             this.btnVentas.MouseEnter += new System.EventHandler(this.btnVentas_MouseEnter);
             this.btnVentas.MouseLeave += new System.EventHandler(this.btnVentas_MouseLeave);
             // 

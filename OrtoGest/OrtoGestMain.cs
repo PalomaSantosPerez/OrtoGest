@@ -15,40 +15,68 @@ namespace OrtoGest
         public OrtoGestMain()
         {
             InitializeComponent();
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        // =====================================================
+        // 1. EVENTOS CLICK DEL MENÚ PRINCIPAL
+        // =====================================================
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //BOTON CLIENTES
+        // BOTÓN CLIENTES
         private void btnClientes_Click(object sender, EventArgs e)
         {
-           // btnClientes.BackColor = Color.SteelBlue;
-
+            using (var frm = new FrmClientes())
+            {
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog(this);
+            }
         }
 
+        // BOTÓN PRODUCTOS
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmProductos())
+            {
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog(this);
+            }
+        }
+
+        // BOTÓN VENTAS
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmVentas())
+            {
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog(this);
+            }
+        }
+
+        // BOTÓN SALIR
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            // Cierra solo esta ventana:
+            // this.Close();
+
+            // O cierra toda la aplicación:
+            Application.Exit();
+        }
+
+        // =====================================================
+        // 2. EFECTOS VISUALES (COLORES HOVER)
+        // =====================================================
+
+        // BOTÓN CLIENTES
         private void btnClientes_MouseEnter(object sender, EventArgs e)
         {
             btnClientes.BackColor = Color.LightCyan;
-
         }
-
 
         private void btnClientes_MouseLeave(object sender, EventArgs e)
         {
             btnClientes.BackColor = Color.Aquamarine;
-
         }
 
-        //BOTON PRODUCTOS
+        // BOTÓN PRODUCTOS
         private void btnProductos_MouseEnter(object sender, EventArgs e)
         {
             btnProductos.BackColor = Color.LightCyan;
@@ -58,31 +86,34 @@ namespace OrtoGest
         {
             btnProductos.BackColor = Color.Aquamarine;
         }
-        
-        //BOTON VENTAS
+
+        // BOTÓN VENTAS
         private void btnVentas_MouseEnter(object sender, EventArgs e)
         {
             btnVentas.BackColor = Color.LightCyan;
-
         }
 
         private void btnVentas_MouseLeave(object sender, EventArgs e)
         {
             btnVentas.BackColor = Color.Aquamarine;
-
         }
 
-        //BOTON SALIR
+        // BOTÓN SALIR
         private void btnSalir_MouseEnter(object sender, EventArgs e)
         {
             btnSalir.BackColor = Color.LightBlue;
-
         }
 
         private void btnSalir_MouseLeave(object sender, EventArgs e)
         {
             btnSalir.BackColor = Color.SteelBlue;
-
         }
+
+        // =====================================================
+        // 3. OTROS EVENTOS
+        // =====================================================
+
+       
     }
 }
+

@@ -75,6 +75,9 @@
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductos.resx">
+      <DependentUpon>FrmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrtoGestMain.resx">
       <DependentUpon>OrtoGestMain.cs</DependentUpon>
     </EmbeddedResource>

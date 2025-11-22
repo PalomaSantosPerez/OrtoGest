@@ -63,6 +63,25 @@
             textAlta = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
+            // textObserv
+            // 
+            textObserv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textObserv.Location = new System.Drawing.Point(133, 285);
+            textObserv.Multiline = true;
+            textObserv.Name = "textObserv";
+            textObserv.Size = new System.Drawing.Size(244, 96);
+            textObserv.TabIndex = 11;
+            textObserv.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textAlta
+            // 
+            textAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textAlta.ForeColor = System.Drawing.SystemColors.WindowText;
+            textAlta.Location = new System.Drawing.Point(133, 398);
+            textAlta.Name = "textAlta";
+            textAlta.Size = new System.Drawing.Size(169, 22);
+            textAlta.TabIndex = 12;
+            // 
             // lblTituloClientes
             // 
             this.lblTituloClientes.AutoSize = true;
@@ -181,7 +200,7 @@
             this.textEdad.Location = new System.Drawing.Point(133, 214);
             this.textEdad.Name = "textEdad";
             this.textEdad.Size = new System.Drawing.Size(169, 25);
-            this.textEdad.TabIndex = 4;
+            this.textEdad.TabIndex = 5;
             // 
             // lblTelefono
             // 
@@ -257,7 +276,7 @@
             this.textPoblacion.Location = new System.Drawing.Point(560, 179);
             this.textPoblacion.Name = "textPoblacion";
             this.textPoblacion.Size = new System.Drawing.Size(216, 25);
-            this.textPoblacion.TabIndex = 15;
+            this.textPoblacion.TabIndex = 9;
             // 
             // lblCP
             // 
@@ -276,7 +295,7 @@
             this.textCP.Location = new System.Drawing.Point(560, 214);
             this.textCP.Name = "textCP";
             this.textCP.Size = new System.Drawing.Size(216, 25);
-            this.textCP.TabIndex = 17;
+            this.textCP.TabIndex = 10;
             // 
             // lblDatosAd
             // 
@@ -300,15 +319,6 @@
             this.lblObservaciones.TabIndex = 19;
             this.lblObservaciones.Text = "Observaciones:";
             // 
-            // textObserv
-            // 
-            textObserv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textObserv.Location = new System.Drawing.Point(133, 285);
-            textObserv.Name = "textObserv";
-            textObserv.Size = new System.Drawing.Size(244, 25);
-            textObserv.TabIndex = 11;
-            textObserv.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // lblAlta
             // 
             this.lblAlta.AutoSize = true;
@@ -319,15 +329,6 @@
             this.lblAlta.Size = new System.Drawing.Size(70, 17);
             this.lblAlta.TabIndex = 21;
             this.lblAlta.Text = "Fecha Alta:";
-            // 
-            // textAlta
-            // 
-            textAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textAlta.ForeColor = System.Drawing.SystemColors.WindowText;
-            textAlta.Location = new System.Drawing.Point(133, 398);
-            textAlta.Name = "textAlta";
-            textAlta.Size = new System.Drawing.Size(100, 22);
-            textAlta.TabIndex = 12;
             // 
             // btnGuardar
             // 
@@ -433,6 +434,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDatosPersonales);
             this.Controls.Add(this.lblTituloClientes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmClientes";

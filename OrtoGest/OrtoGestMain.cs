@@ -7,16 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
+
 
 namespace OrtoGest
 {
     public partial class OrtoGestMain : Form
     {
+        public static string cadenaConexion = 
+            @"Data Source=C:\ProyectoFinal\OrtoGest\ortogest.db;Version=3;";
+
         public OrtoGestMain()
         {
             InitializeComponent();
+            ProbarConexion();
         }
 
+        // ======================================
+        // MÉTODO PARA PROBAR LA CONEXIÓN
+        // ======================================
+        public void ProbarConexion()
+        {
+            try
+            {
+                using (SQLiteConnection conexion = new SQLiteConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    MessageBox.Show("Conexión correcta con la base de datos.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos:\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         // =====================================================
         // 1. EVENTOS CLICK DEL MENÚ PRINCIPAL
         // =====================================================

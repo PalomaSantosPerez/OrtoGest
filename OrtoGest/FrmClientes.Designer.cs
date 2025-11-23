@@ -30,6 +30,9 @@
         {
             System.Windows.Forms.TextBox textObserv;
             System.Windows.Forms.TextBox textAlta;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTituloClientes = new System.Windows.Forms.Label();
             this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -37,7 +40,7 @@
             this.lblApell1 = new System.Windows.Forms.Label();
             this.textApell1 = new System.Windows.Forms.TextBox();
             this.lblApell2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApell2 = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.textDNI = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
@@ -59,8 +62,10 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             textObserv = new System.Windows.Forms.TextBox();
             textAlta = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // textObserv
@@ -69,7 +74,7 @@
             textObserv.Location = new System.Drawing.Point(133, 285);
             textObserv.Multiline = true;
             textObserv.Name = "textObserv";
-            textObserv.Size = new System.Drawing.Size(244, 96);
+            textObserv.Size = new System.Drawing.Size(244, 67);
             textObserv.TabIndex = 11;
             textObserv.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -77,7 +82,7 @@
             // 
             textAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textAlta.ForeColor = System.Drawing.SystemColors.WindowText;
-            textAlta.Location = new System.Drawing.Point(133, 398);
+            textAlta.Location = new System.Drawing.Point(133, 359);
             textAlta.Name = "textAlta";
             textAlta.Size = new System.Drawing.Size(169, 22);
             textAlta.TabIndex = 12;
@@ -156,13 +161,13 @@
             this.lblApell2.TabIndex = 5;
             this.lblApell2.Text = "Segundo Apellido:";
             // 
-            // textBox2
+            // txtApell2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(133, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 25);
-            this.textBox2.TabIndex = 3;
+            this.txtApell2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApell2.Location = new System.Drawing.Point(133, 139);
+            this.txtApell2.Name = "txtApell2";
+            this.txtApell2.Size = new System.Drawing.Size(169, 25);
+            this.txtApell2.TabIndex = 3;
             // 
             // lblDNI
             // 
@@ -324,7 +329,7 @@
             this.lblAlta.AutoSize = true;
             this.lblAlta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlta.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblAlta.Location = new System.Drawing.Point(17, 404);
+            this.lblAlta.Location = new System.Drawing.Point(17, 359);
             this.lblAlta.Name = "lblAlta";
             this.lblAlta.Size = new System.Drawing.Size(70, 17);
             this.lblAlta.TabIndex = 21;
@@ -373,7 +378,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(450, 391);
+            this.btnLimpiar.Location = new System.Drawing.Point(450, 346);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(120, 30);
             this.btnLimpiar.TabIndex = 24;
@@ -390,12 +395,50 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(656, 391);
+            this.btnEliminar.Location = new System.Drawing.Point(656, 346);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 30);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvClientes.Location = new System.Drawing.Point(12, 398);
+            this.dgvClientes.MultiSelect = false;
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvClientes.Size = new System.Drawing.Size(764, 40);
+            this.dgvClientes.TabIndex = 26;
             // 
             // FrmClientes
             // 
@@ -403,6 +446,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEditar);
@@ -426,7 +470,7 @@
             this.Controls.Add(this.lblEdad);
             this.Controls.Add(this.textDNI);
             this.Controls.Add(this.lblDNI);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtApell2);
             this.Controls.Add(this.lblApell2);
             this.Controls.Add(this.textApell1);
             this.Controls.Add(this.lblApell1);
@@ -440,6 +484,7 @@
             this.Name = "FrmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gestión de Clientes";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,7 +499,7 @@
         private System.Windows.Forms.Label lblApell1;
         private System.Windows.Forms.TextBox textApell1;
         private System.Windows.Forms.Label lblApell2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApell2;
         private System.Windows.Forms.Label lblDNI;
         private System.Windows.Forms.TextBox textDNI;
         private System.Windows.Forms.Label lblEdad;
@@ -476,5 +521,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView dgvClientes;
     }
 }

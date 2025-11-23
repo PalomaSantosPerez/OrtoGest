@@ -48,8 +48,8 @@
             this.txtProveedor = new System.Windows.Forms.TextBox();
             this.lblDescripción = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardarProd = new System.Windows.Forms.Button();
+            this.btnEditarProductos = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -225,38 +225,38 @@
             this.txtDescripcion.Size = new System.Drawing.Size(230, 41);
             this.txtDescripcion.TabIndex = 17;
             // 
-            // btnGuardar
+            // btnGuardarProd
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(438, 280);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(120, 30);
-            this.btnGuardar.TabIndex = 22;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardarProd.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuardarProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarProd.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnGuardarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btnGuardarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnGuardarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarProd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarProd.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarProd.Location = new System.Drawing.Point(438, 280);
+            this.btnGuardarProd.Name = "btnGuardarProd";
+            this.btnGuardarProd.Size = new System.Drawing.Size(120, 30);
+            this.btnGuardarProd.TabIndex = 22;
+            this.btnGuardarProd.Text = "Guardar";
+            this.btnGuardarProd.UseVisualStyleBackColor = false;
             // 
-            // btnEditar
+            // btnEditarProductos
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(650, 280);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(120, 30);
-            this.btnEditar.TabIndex = 23;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditarProductos.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEditarProductos.FlatAppearance.BorderColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditarProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.btnEditarProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnEditarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarProductos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarProductos.ForeColor = System.Drawing.Color.White;
+            this.btnEditarProductos.Location = new System.Drawing.Point(650, 280);
+            this.btnEditarProductos.Name = "btnEditarProductos";
+            this.btnEditarProductos.Size = new System.Drawing.Size(120, 30);
+            this.btnEditarProductos.TabIndex = 23;
+            this.btnEditarProductos.Text = "Editar";
+            this.btnEditarProductos.UseVisualStyleBackColor = false;
             // 
             // btnLimpiar
             // 
@@ -333,8 +333,8 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnEditarProductos);
+            this.Controls.Add(this.btnGuardarProd);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripción);
             this.Controls.Add(this.txtProveedor);
@@ -383,8 +383,8 @@
         private System.Windows.Forms.TextBox txtProveedor;
         private System.Windows.Forms.Label lblDescripción;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnGuardarProd;
+        private System.Windows.Forms.Button btnEditarProductos;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvProductos;

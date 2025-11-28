@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
-
 namespace OrtoGest
 {
     public partial class OrtoGestMain : Form
     {
-        public static string cadenaConexion = 
-            @"Data Source=C:\ProyectoFinal\OrtoGest\ortogest.db;Version=3;";
+        // ==========================
+        // CADENA DE CONEXIÓN CORRECTA
+        // ==========================
+        public static string cadenaConexion =
+            @"Data Source=" + Application.StartupPath + "\\ortogest.db;Version=3;";
 
         public OrtoGestMain()
         {
@@ -30,11 +32,15 @@ namespace OrtoGest
         {
             try
             {
+                // MUESTRA LA RUTA REAL DEL FICHERO QUE ESTÁ USANDO LA APP
+                MessageBox.Show("Usando BD en:\n" +
+                    System.IO.Path.GetFullPath("ortogest.db"));
+
                 using (SQLiteConnection conexion = new SQLiteConnection(cadenaConexion))
                 {
                     conexion.Open();
-                    MessageBox.Show("Conexión correcta con la base de datos.", "Éxito",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Conexión correcta con la base de datos.",
+                        "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -43,6 +49,7 @@ namespace OrtoGest
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         // =====================================================
         // 1. EVENTOS CLICK DEL MENÚ PRINCIPAL
         // =====================================================

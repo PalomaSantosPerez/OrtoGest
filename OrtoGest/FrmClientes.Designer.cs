@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox textObserv;
-            System.Windows.Forms.TextBox textAlta;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TextBox txtAlta;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.lblTituloClientes = new System.Windows.Forms.Label();
             this.lblDatosPersonales = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.textnombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblApell1 = new System.Windows.Forms.Label();
-            this.textApell1 = new System.Windows.Forms.TextBox();
+            this.txtApellido1 = new System.Windows.Forms.TextBox();
             this.lblApell2 = new System.Windows.Forms.Label();
-            this.txtApell2 = new System.Windows.Forms.TextBox();
+            this.txtApellido2 = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
-            this.textDNI = new System.Windows.Forms.TextBox();
+            this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
-            this.textEdad = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.texTelefono = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.textEmail = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.textDireccion = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblPoblacion = new System.Windows.Forms.Label();
-            this.textPoblacion = new System.Windows.Forms.TextBox();
+            this.txtPoblacion = new System.Windows.Forms.TextBox();
             this.lblCP = new System.Windows.Forms.Label();
-            this.textCP = new System.Windows.Forms.TextBox();
+            this.txtCP = new System.Windows.Forms.TextBox();
             this.lblDatosAd = new System.Windows.Forms.Label();
             this.lblObservaciones = new System.Windows.Forms.Label();
             this.lblAlta = new System.Windows.Forms.Label();
@@ -63,29 +63,28 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            textObserv = new System.Windows.Forms.TextBox();
-            textAlta = new System.Windows.Forms.TextBox();
+            txtAlta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textObserv
+            // txtObservaciones
             // 
-            textObserv.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textObserv.Location = new System.Drawing.Point(133, 285);
-            textObserv.Multiline = true;
-            textObserv.Name = "textObserv";
-            textObserv.Size = new System.Drawing.Size(244, 67);
-            textObserv.TabIndex = 11;
-            textObserv.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtObservaciones.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.Location = new System.Drawing.Point(133, 285);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(244, 67);
+            this.txtObservaciones.TabIndex = 11;
+            this.txtObservaciones.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textAlta
+            // txtAlta
             // 
-            textAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textAlta.ForeColor = System.Drawing.SystemColors.WindowText;
-            textAlta.Location = new System.Drawing.Point(133, 359);
-            textAlta.Name = "textAlta";
-            textAlta.Size = new System.Drawing.Size(169, 22);
-            textAlta.TabIndex = 12;
+            txtAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            txtAlta.ForeColor = System.Drawing.SystemColors.WindowText;
+            txtAlta.Location = new System.Drawing.Point(133, 359);
+            txtAlta.Name = "txtAlta";
+            txtAlta.Size = new System.Drawing.Size(169, 22);
+            txtAlta.TabIndex = 12;
             // 
             // lblTituloClientes
             // 
@@ -122,14 +121,14 @@
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre:";
             // 
-            // textnombre
+            // txtNombre
             // 
-            this.textnombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textnombre.Location = new System.Drawing.Point(133, 69);
-            this.textnombre.Name = "textnombre";
-            this.textnombre.Size = new System.Drawing.Size(169, 25);
-            this.textnombre.TabIndex = 1;
-            this.textnombre.TextChanged += new System.EventHandler(this.textnombre_TextChanged);
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(133, 69);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(169, 25);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.textnombre_TextChanged);
             // 
             // lblApell1
             // 
@@ -142,13 +141,13 @@
             this.lblApell1.TabIndex = 3;
             this.lblApell1.Text = "Primer Apellido:";
             // 
-            // textApell1
+            // txtApellido1
             // 
-            this.textApell1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textApell1.Location = new System.Drawing.Point(133, 104);
-            this.textApell1.Name = "textApell1";
-            this.textApell1.Size = new System.Drawing.Size(169, 25);
-            this.textApell1.TabIndex = 2;
+            this.txtApellido1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1.Location = new System.Drawing.Point(133, 104);
+            this.txtApellido1.Name = "txtApellido1";
+            this.txtApellido1.Size = new System.Drawing.Size(169, 25);
+            this.txtApellido1.TabIndex = 2;
             // 
             // lblApell2
             // 
@@ -161,13 +160,13 @@
             this.lblApell2.TabIndex = 5;
             this.lblApell2.Text = "Segundo Apellido:";
             // 
-            // txtApell2
+            // txtApellido2
             // 
-            this.txtApell2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApell2.Location = new System.Drawing.Point(133, 139);
-            this.txtApell2.Name = "txtApell2";
-            this.txtApell2.Size = new System.Drawing.Size(169, 25);
-            this.txtApell2.TabIndex = 3;
+            this.txtApellido2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido2.Location = new System.Drawing.Point(133, 139);
+            this.txtApellido2.Name = "txtApellido2";
+            this.txtApellido2.Size = new System.Drawing.Size(169, 25);
+            this.txtApellido2.TabIndex = 3;
             // 
             // lblDNI
             // 
@@ -180,13 +179,13 @@
             this.lblDNI.TabIndex = 6;
             this.lblDNI.Text = "DNI:";
             // 
-            // textDNI
+            // txtDNI
             // 
-            this.textDNI.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDNI.Location = new System.Drawing.Point(133, 179);
-            this.textDNI.Name = "textDNI";
-            this.textDNI.Size = new System.Drawing.Size(169, 25);
-            this.textDNI.TabIndex = 4;
+            this.txtDNI.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNI.Location = new System.Drawing.Point(133, 179);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(169, 25);
+            this.txtDNI.TabIndex = 4;
             // 
             // lblEdad
             // 
@@ -199,13 +198,13 @@
             this.lblEdad.TabIndex = 7;
             this.lblEdad.Text = "Edad:";
             // 
-            // textEdad
+            // txtEdad
             // 
-            this.textEdad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdad.Location = new System.Drawing.Point(133, 214);
-            this.textEdad.Name = "textEdad";
-            this.textEdad.Size = new System.Drawing.Size(169, 25);
-            this.textEdad.TabIndex = 5;
+            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Location = new System.Drawing.Point(133, 214);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(169, 25);
+            this.txtEdad.TabIndex = 5;
             // 
             // lblTelefono
             // 
@@ -218,13 +217,13 @@
             this.lblTelefono.TabIndex = 8;
             this.lblTelefono.Text = "Teléfono:";
             // 
-            // texTelefono
+            // txtTelefono
             // 
-            this.texTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.texTelefono.Location = new System.Drawing.Point(560, 69);
-            this.texTelefono.Name = "texTelefono";
-            this.texTelefono.Size = new System.Drawing.Size(216, 25);
-            this.texTelefono.TabIndex = 6;
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(560, 69);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(216, 25);
+            this.txtTelefono.TabIndex = 6;
             // 
             // lblEmail
             // 
@@ -237,13 +236,13 @@
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email:";
             // 
-            // textEmail
+            // txtEmail
             // 
-            this.textEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEmail.Location = new System.Drawing.Point(560, 104);
-            this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(216, 25);
-            this.textEmail.TabIndex = 7;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(560, 104);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(216, 25);
+            this.txtEmail.TabIndex = 7;
             // 
             // lblDireccion
             // 
@@ -256,13 +255,13 @@
             this.lblDireccion.TabIndex = 12;
             this.lblDireccion.Text = "Dirección:";
             // 
-            // textDireccion
+            // txtDireccion
             // 
-            this.textDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDireccion.Location = new System.Drawing.Point(560, 144);
-            this.textDireccion.Name = "textDireccion";
-            this.textDireccion.Size = new System.Drawing.Size(216, 25);
-            this.textDireccion.TabIndex = 8;
+            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(560, 144);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(216, 25);
+            this.txtDireccion.TabIndex = 8;
             // 
             // lblPoblacion
             // 
@@ -275,13 +274,13 @@
             this.lblPoblacion.TabIndex = 14;
             this.lblPoblacion.Text = "Población:";
             // 
-            // textPoblacion
+            // txtPoblacion
             // 
-            this.textPoblacion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPoblacion.Location = new System.Drawing.Point(560, 179);
-            this.textPoblacion.Name = "textPoblacion";
-            this.textPoblacion.Size = new System.Drawing.Size(216, 25);
-            this.textPoblacion.TabIndex = 9;
+            this.txtPoblacion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoblacion.Location = new System.Drawing.Point(560, 179);
+            this.txtPoblacion.Name = "txtPoblacion";
+            this.txtPoblacion.Size = new System.Drawing.Size(216, 25);
+            this.txtPoblacion.TabIndex = 9;
             // 
             // lblCP
             // 
@@ -294,13 +293,13 @@
             this.lblCP.TabIndex = 16;
             this.lblCP.Text = "Código Postal:";
             // 
-            // textCP
+            // txtCP
             // 
-            this.textCP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCP.Location = new System.Drawing.Point(560, 214);
-            this.textCP.Name = "textCP";
-            this.textCP.Size = new System.Drawing.Size(216, 25);
-            this.textCP.TabIndex = 10;
+            this.txtCP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCP.Location = new System.Drawing.Point(560, 214);
+            this.txtCP.Name = "txtCP";
+            this.txtCP.Size = new System.Drawing.Size(216, 25);
+            this.txtCP.TabIndex = 10;
             // 
             // lblDatosAd
             // 
@@ -351,6 +350,7 @@
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEditar
             // 
@@ -407,35 +407,35 @@
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClientes.Location = new System.Drawing.Point(12, 398);
             this.dgvClientes.MultiSelect = false;
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(764, 40);
             this.dgvClientes.TabIndex = 26;
@@ -445,36 +445,36 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 473);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(textAlta);
+            this.Controls.Add(txtAlta);
             this.Controls.Add(this.lblAlta);
-            this.Controls.Add(textObserv);
+            this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblObservaciones);
             this.Controls.Add(this.lblDatosAd);
-            this.Controls.Add(this.textCP);
+            this.Controls.Add(this.txtCP);
             this.Controls.Add(this.lblCP);
-            this.Controls.Add(this.textPoblacion);
+            this.Controls.Add(this.txtPoblacion);
             this.Controls.Add(this.lblPoblacion);
-            this.Controls.Add(this.textDireccion);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.texTelefono);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.textEdad);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.lblEdad);
-            this.Controls.Add(this.textDNI);
+            this.Controls.Add(this.txtDNI);
             this.Controls.Add(this.lblDNI);
-            this.Controls.Add(this.txtApell2);
+            this.Controls.Add(this.txtApellido2);
             this.Controls.Add(this.lblApell2);
-            this.Controls.Add(this.textApell1);
+            this.Controls.Add(this.txtApellido1);
             this.Controls.Add(this.lblApell1);
-            this.Controls.Add(this.textnombre);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDatosPersonales);
             this.Controls.Add(this.lblTituloClientes);
@@ -496,25 +496,25 @@
         private System.Windows.Forms.Label lblTituloClientes;
         private System.Windows.Forms.Label lblDatosPersonales;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox textnombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblApell1;
-        private System.Windows.Forms.TextBox textApell1;
+        private System.Windows.Forms.TextBox txtApellido1;
         private System.Windows.Forms.Label lblApell2;
-        private System.Windows.Forms.TextBox txtApell2;
+        private System.Windows.Forms.TextBox txtApellido2;
         private System.Windows.Forms.Label lblDNI;
-        private System.Windows.Forms.TextBox textDNI;
+        private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.TextBox textEdad;
+        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox texTelefono;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox textDireccion;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblPoblacion;
-        private System.Windows.Forms.TextBox textPoblacion;
+        private System.Windows.Forms.TextBox txtPoblacion;
         private System.Windows.Forms.Label lblCP;
-        private System.Windows.Forms.TextBox textCP;
+        private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.Label lblDatosAd;
         private System.Windows.Forms.Label lblObservaciones;
         private System.Windows.Forms.Label lblAlta;
@@ -523,5 +523,8 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.TextBox txtAlta;
+
     }
 }

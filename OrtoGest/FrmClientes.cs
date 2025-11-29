@@ -19,7 +19,7 @@ namespace OrtoGest
             InitializeComponent();
 
         }
-        SQLiteConnection conexion = new SQLiteConnection();
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -55,8 +55,8 @@ namespace OrtoGest
                 {
                     conexion.Open();
 
-                    MessageBox.Show("Usando BD en:\n" + System.IO.Path.GetFullPath("ortogest.db"));
-
+                   // MessageBox.Show("Usando BD en:\n" + System.IO.Path.GetFullPath("ortogest.db"));
+                   //tras un fallo en la conexion con este mensaje localizamos direccion bd
 
                     string consulta = "SELECT * FROM Clientes";
                     SQLiteDataAdapter adaptador = new SQLiteDataAdapter(consulta, conexion);
@@ -73,6 +73,51 @@ namespace OrtoGest
             }
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SQLiteConnection conexion = new SQLiteConnection(OrtoGestMain.cadenaConexion))
+                {
+                    conexion.Open();
 
+                    string consulta = @"INSERT INTO Clientes
+            (Nombre, Apellido1, Apellido2, DNI, Edad, Telefono, Email,
+             Direccion, Poblacion, CP, Observaciones, FechaAlta)
+            VALUES (@Nombre, @Apellido1, @Apellido2, @DNI, @Edad, @Telefono,
+                    @Email, @Direccion, @Poblacion, @CP, @Observaciones, @FechaAlta)";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@Apellido1", txtApellido1.Text);
+                        cmd.Parameters.AddWithValue("@Apellido2", txtApellido2.Text);
+                        cmd.Parameters.AddWithValue("@DNI", txtDNI.Text);
+                        cmd.Parameters.AddWithValue("@Edad", txtEdad.Text);
+                        cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
+                        cmd.Parameters.AddWithValue("@Poblacion", txtPoblacion.Text);
+                        cmd.Parameters.AddWithValue("@CP", txtCP.Text);
+                        cmd.Parameters.AddWithValue("@Observaciones", txtObservaciones.Text);
+
+                        // fecha actual
+                        cmd.Parameters.AddWithValue("@FechaAlta", DateTime.Now.ToString("yyyy-MM-dd"));
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Cliente guardado correctamente.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                CargarClientes(); // refrescar la tabla
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar cliente:\n" + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

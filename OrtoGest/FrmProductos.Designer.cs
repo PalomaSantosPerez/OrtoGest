@@ -106,7 +106,7 @@
             this.lblCategoria.Size = new System.Drawing.Size(68, 17);
             this.lblCategoria.TabIndex = 4;
             this.lblCategoria.Text = "Categoria:";
-            this.lblCategoria.Click += new System.EventHandler(this.label1_Click);
+            //this.lblCategoria.Click += new System.EventHandler(this.label1_Click);
             // 
             // combCategoria
             // 
@@ -357,6 +357,7 @@
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Gestión de Productos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

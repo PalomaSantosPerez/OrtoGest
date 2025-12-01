@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TextBox txtAlta;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,7 +62,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            txtAlta = new System.Windows.Forms.TextBox();
+            this.txtAlta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,15 +75,6 @@
             this.txtObservaciones.Size = new System.Drawing.Size(244, 67);
             this.txtObservaciones.TabIndex = 11;
             this.txtObservaciones.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtAlta
-            // 
-            txtAlta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            txtAlta.ForeColor = System.Drawing.SystemColors.WindowText;
-            txtAlta.Location = new System.Drawing.Point(133, 359);
-            txtAlta.Name = "txtAlta";
-            txtAlta.Size = new System.Drawing.Size(169, 22);
-            txtAlta.TabIndex = 12;
             // 
             // lblTituloClientes
             // 
@@ -367,6 +357,7 @@
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnLimpiar
             // 
@@ -401,6 +392,7 @@
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dgvClientes
             // 
@@ -439,6 +431,15 @@
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Size = new System.Drawing.Size(764, 40);
             this.dgvClientes.TabIndex = 26;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            // 
+            // txtAlta
+            // 
+            this.txtAlta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAlta.Location = new System.Drawing.Point(134, 359);
+            this.txtAlta.Name = "txtAlta";
+            this.txtAlta.Size = new System.Drawing.Size(100, 25);
+            this.txtAlta.TabIndex = 27;
             // 
             // FrmClientes
             // 
@@ -446,12 +447,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(800, 473);
+            this.Controls.Add(this.txtAlta);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(txtAlta);
             this.Controls.Add(this.lblAlta);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.lblObservaciones);
@@ -525,6 +526,5 @@
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.TextBox txtAlta;
-
     }
 }

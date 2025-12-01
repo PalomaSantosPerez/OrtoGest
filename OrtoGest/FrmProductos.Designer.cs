@@ -106,7 +106,6 @@
             this.lblCategoria.Size = new System.Drawing.Size(68, 17);
             this.lblCategoria.TabIndex = 4;
             this.lblCategoria.Text = "Categoria:";
-            //this.lblCategoria.Click += new System.EventHandler(this.label1_Click);
             // 
             // combCategoria
             // 
@@ -257,6 +256,7 @@
             this.btnEditarProductos.TabIndex = 23;
             this.btnEditarProductos.Text = "Editar";
             this.btnEditarProductos.UseVisualStyleBackColor = false;
+            this.btnEditarProductos.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnLimpiar
             // 

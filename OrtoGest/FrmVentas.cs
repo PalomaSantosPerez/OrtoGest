@@ -45,9 +45,73 @@ namespace OrtoGest
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void CargarClientes()
+        {
+            using (SQLiteConnection conexion = new SQLiteConnection(OrtoGestMain.cadenaConexion))
+            {
+                conexion.Open();
+
+                string consulta = "SELECT IdCliente, Nombre FROM Clientes";
+                SQLiteCommand cmd = new SQLiteCommand(consulta, conexion);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+                DataTable tabla = new DataTable();
+                da.Fill(tabla);
+
+                cmbCliente.DataSource = tabla;
+                cmbCliente.DisplayMember = "Nombre";
+                cmbCliente.ValueMember = "IdCliente";
+            }
+        }
+
+        private void CargarProductosEnCombo()
+        {
+            using (SQLiteConnection conexion = new SQLiteConnection(OrtoGestMain.cadenaConexion))
+            {
+                conexion.Open();
+
+                string consulta = "SELECT IdProducto, Nombre, Precio FROM Productos";
+                SQLiteDataAdapter da = new SQLiteDataAdapter(consulta, conexion);
+                DataTable tabla = new DataTable();
+                da.Fill(tabla);
+
+                cmbProducto.DataSource = tabla;
+                cmbProducto.DisplayMember = "Nombre";
+                cmbProducto.ValueMember = "IdProducto";
+            }
+        }
+
+        private void cmbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbProducto.SelectedValue == null) return;
+
+            DataRowView fila = cmbProducto.SelectedItem as DataRowView;
+
+            if (fila != null)
+            {
+                txtPrecioUnit.Text = fila["Precio"].ToString();
+            }
+            CalcularTotal();
+        }
+
+        private void CalcularTotal()
+        {
+            if (double.TryParse(txtPrecioUnit.Text, out double precio) &&
+                int.TryParse(txtCantidad.Text, out int cantidad))
+            {
+                txtTotal.Text = (precio * cantidad).ToString("0.00");
+            }
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            CalcularTotal();
+        }
+
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             CargarVentas();
+            CargarClientes();
+            CargarProductosEnCombo();
         }
 
     }

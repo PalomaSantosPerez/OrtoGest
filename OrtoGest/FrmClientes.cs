@@ -132,6 +132,8 @@ namespace OrtoGest
                     }
                 }
 
+                txtAlta.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
                 MessageBox.Show("Cliente guardado correctamente.", "Éxito",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -267,10 +269,12 @@ namespace OrtoGest
                     }
                 }
 
+                txtAlta.Text = DateTime.Parse(txtAlta.Text).ToString("yyyy-MM-dd");
+
                 MessageBox.Show("Cliente eliminado correctamente.",
                         "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Refrescar tabla
+                    // Refrescar tabla
                     CargarClientes();
 
                     // Limpiar los campos
@@ -283,7 +287,10 @@ namespace OrtoGest
             }
         }
 
-        
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
     }
 }
 

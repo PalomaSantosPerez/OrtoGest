@@ -206,6 +206,7 @@
             this.btnGuardaVenta.TabIndex = 9;
             this.btnGuardaVenta.Text = "Guardar";
             this.btnGuardaVenta.UseVisualStyleBackColor = false;
+            this.btnGuardaVenta.Click += new System.EventHandler(this.btnGuardaVenta_Click);
             // 
             // btnEditarVentas
             // 
@@ -219,6 +220,7 @@
             this.btnEditarVentas.TabIndex = 10;
             this.btnEditarVentas.Text = "Editar";
             this.btnEditarVentas.UseVisualStyleBackColor = false;
+            this.btnEditarVentas.Click += new System.EventHandler(this.btnEditarVentas_Click);
             // 
             // btnLinpiarVentas
             // 
@@ -235,6 +237,7 @@
             this.btnLinpiarVentas.TabIndex = 11;
             this.btnLinpiarVentas.Text = "Limpiar";
             this.btnLinpiarVentas.UseVisualStyleBackColor = false;
+            this.btnLinpiarVentas.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminarVentas
             // 
@@ -251,6 +254,7 @@
             this.btnEliminarVentas.TabIndex = 12;
             this.btnEliminarVentas.Text = "Eliminar";
             this.btnEliminarVentas.UseVisualStyleBackColor = false;
+            this.btnEliminarVentas.Click += new System.EventHandler(this.btnEliminarVentas_Click);
             // 
             // dgvVentas
             // 
@@ -265,6 +269,7 @@
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(720, 189);
             this.dgvVentas.TabIndex = 13;
+            this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // FrmVentas
             // 
@@ -292,7 +297,7 @@
             this.Controls.Add(this.lblDatosVentas);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVentas";
             this.Text = "Gestión de Ventas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();

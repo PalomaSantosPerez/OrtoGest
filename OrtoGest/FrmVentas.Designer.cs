@@ -111,6 +111,7 @@
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(230, 25);
             this.cmbProducto.TabIndex = 2;
+            this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);
             // 
             // lblCantidad
             // 
@@ -129,6 +130,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(230, 25);
             this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // lblPrecioUnit
             // 
@@ -170,6 +172,7 @@
             this.txtTotal.Size = new System.Drawing.Size(130, 25);
             this.txtTotal.TabIndex = 5;
             this.txtTotal.TabStop = false;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // lblFecha
             // 
@@ -300,6 +303,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVentas";
             this.Text = "Gestión de Ventas";
+            this.Load += new System.EventHandler(this.FrmVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
